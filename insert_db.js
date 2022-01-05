@@ -167,13 +167,13 @@ async function write_data(items) {
             for (let key in item['metrics'])
             {
                 if ('step' in item['tags']) {
-                    lines.push(`system.cp.js2.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']};stepNumber=${item['tags']['step']} ${item['metrics'][key]} ${item['timestamp']}`)
+                    lines.push(`system.cp.testdata.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']};stepNumber=${item['tags']['step']} ${item['metrics'][key]} ${item['timestamp']}`)
                 }
                 else if ('hop_number' in item['tags']) {
-                    lines.push(`system.cp.js2.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']};hopNumber=${item['tags']['hop_number']} ${item['metrics'][key]} ${item['timestamp']}`)
+                    lines.push(`system.cp.testdata.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']};hopNumber=${item['tags']['hop_number']} ${item['metrics'][key]} ${item['timestamp']}`)
                 }
                 else {
-                    lines.push(`system.cp.js2.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']} ${item['metrics'][key]} ${item['timestamp']}`)
+                    lines.push(`system.cp.testdata.${key};testId=${item['tags']['testId']};nodeId=${item['tags']['nodeId']} ${item['metrics'][key]} ${item['timestamp']}`)
                 }
             }
         }
