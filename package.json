@@ -1,0 +1,19 @@
+{
+  "name": "nodejs_script_graphite",
+  "version": "1.0.0",
+  "description": "catchpoint rest api integration with graphite for storing raw data",
+  "main": "insert_db.js",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "bunyan-rotating-file-stream": "^2.0.0",
+    "node-fetch": "^3.1.0",
+    "utf8": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Catchpoint Systems, Inc.",
+  "license": "ISC"
+}
