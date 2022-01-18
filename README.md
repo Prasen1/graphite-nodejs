@@ -67,4 +67,4 @@ This integration relies on a Node.js script that runs at 15 minutes intervals to
     └── insert_db.js          ## main file
 
 
-Once the script starts running and data is inserted into Graphite, it can viewed via Graphite's Web UI.
+Once the script starts running and data is inserted into Graphite, it can be viewed via Graphite's Web UI.
