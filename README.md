@@ -67,6 +67,6 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
     └── insert_db.js          ## main file
 
 
-Time Series Data in can be viewed via Graphite's Web UI. Alternatively, we can connect Graphite to an analytics tool such as Grafana and [explore the data](https://grafana.com/docs/grafana/latest/datasources/graphite/).
+Time Series data in Graphite can be viewed via it's Web UI. Alternatively, we can connect Graphite to an analytics tool such as Grafana and [explore the data](https://grafana.com/docs/grafana/latest/datasources/graphite/).
 
 **Note: Each distinct metric sent to Graphite is stored in its own database file. This means that high volume data requires a good RAID array and/or SSDs to keep up with the I/O operations, or there may be missing data. For more on Graphite scalability please refer to the [FAQ](https://graphite.readthedocs.io/en/latest/faq.html)**
