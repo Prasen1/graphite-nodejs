@@ -1,9 +1,9 @@
 # Graphite-Nodejs
 Catchpoint Integration with Graphite
 ---
-We can use this script to pull timeseries data from Catchpoint and store it in Graphite for viewing and analysis using a compatible analysis tool such as Grafana.
+Graphite is a scalable graphing tool for Time Series data. In Graphite, data is composed of a metric name, metric value, timestamp, and optional tags.
 
-This integration relies on a Node.js script that runs at 15 minutes intervals to pull raw performance chart data from the Catchpoint GET: LastRaw API. It can be used to retrieve and store data for a list of tests in the same division. 
+This integration makes use of a Node.js script that runs at 15 minutes intervals to pull raw performance chart data from the Catchpoint GET: LastRaw API. It can be used to retrieve and store data for a list of tests in the same division.
 
 ## Prerequisites
 1. NodeJS v16.x
@@ -67,4 +67,6 @@ This integration relies on a Node.js script that runs at 15 minutes intervals to
     └── insert_db.js          ## main file
 
 
-Once the script starts running and data is inserted into Graphite, it can be viewed via Graphite's Web UI.
+Time Series Data in can be viewed via Graphite's Web UI. Alternatively, we can connect Graphite to an analytics tool such as Grafana and [explore the data](https://grafana.com/docs/grafana/latest/datasources/graphite/).
+
+**Note: Each distinct metric sent to Graphite is stored in its own database file. This means that high volume data requires a good RAID array and/or SSDs to keep up with the I/O operations, or there may be missing data. For more on Graphite scalability please refer to the [FAQ](https://graphite.readthedocs.io/en/latest/faq.html)**
