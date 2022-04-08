@@ -12,7 +12,7 @@ function get_token(clientId, clientSecret) {
     fetch(token_url,
       {
         method: 'POST',
-        body: 'grant_type=client_credentials&client_id=' + clientId + '&client_secret=' + clientSecret,
+        body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       })
       .then(res => res.json())
